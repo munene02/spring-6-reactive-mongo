@@ -8,6 +8,7 @@ import reactor.core.publisher.Mono;
  * @author Martin Munene
  */
 public interface BeerService {
+    Flux<BeerDTO> findByBeerStyle(String beerStyle);
     Mono<BeerDTO> findFirstByBeerName(String beerName);
     Flux<BeerDTO> listBeers();
     Mono<BeerDTO> saveBeer(Mono<BeerDTO> beerDto);
